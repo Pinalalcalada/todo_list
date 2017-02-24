@@ -1,0 +1,113 @@
+div {
+  padding: 2px;
+}
+
+.ib { 
+  display: inline-block;
+  color: white;
+  margin: 10px;
+}
+
+.panelHead {
+  background-color: #337ab7;
+  border-color: #337ab7;
+  margin: 0px;
+  border-radius: 3px 
+}
+
+body {
+  background-image: url(./mainBg.png);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.project {
+  width: 600px;
+  margin: auto;
+  padding: 0px;
+  border-radius: 3px;
+  border: 1px solid #337ab7;
+}
+
+.panel-buttons {
+  float: right;
+}
+
+.calendar {
+  padding: 1px;
+}
+
+.button-text {
+  border-radius: 1px;
+  width: 525px;
+  height: 25px;
+}
+
+.taskCreate {
+    background-color: white;
+    margin: 0px;
+    border-radius: 4px;
+}
+
+.s-t-d {
+      margin-left: 540px;
+}
+
+.taskList {
+    border: 1px solid #d9e1e8;
+    background-color: white;
+    margin: 0px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.task-list-text {
+  margin: 0px;
+}
+
+.btn-success {
+    background-color: #5cb85c;
+    height: 31px;
+    width: auto;
+    border-radius: 3px;
+    color: white;
+    font-size: 18px;
+    border: 1px solid #5cb85c;
+}
+
+.projName {
+    font-family: inherit;
+    font-size: 20px;
+        width: 320px;
+    margin: 0px;
+}
+
+.panel-buttons {
+  float:none;
+  
+}
+
+.panel-links-container {
+  width: 170px;
+}
+
+.float-buttons {
+  width: 80px;
+    display: inline-block;
+    float: left;
+}
+
+.task-list-cont {
+      width: auto;
+}
+
+.add-task {
+      margin: auto;
+    width: 100px;
+    padding-top: 30px;
+}
+
+.task-list-row {
+  float:right;
+}

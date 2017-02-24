@@ -1,0 +1,58 @@
+<h1 class="s-t-d">SIMPLE TODO LISTS</h1>
+<div ng-repeat="project in projects.list" class="project">
+    <div class="panelHead">
+        <div class="calendar ib">
+            <%= image_tag("calendar.png", size: "25x25", alt: "cal") %>
+        </div>
+        <div class="projName ib">
+            <div ng-show="projects.editInputActive != project.id">
+                <p>{{project.name}}</p>
+            </div>
+            <div ng-show="projects.editInputActive == project.id">
+                <input ng-model="projects.editInput" />
+                <button ng-click="projects.updateProject(project)">Save</button>
+            </div>
+        </div>
+        <div class="panel-buttons ib">
+            <div class="float-buttons">
+                <div class="panel-links-container">
+                    <a href="" class="panel-links">
+                        <%= image_tag("deadline.png", size: "25x25", alt: "deadline") %>
+                    </a>
+                    <a href="" class="panel-links" ng-click="projects.deleteProject(project.id)">
+                        <%= image_tag("delete.png", size: "25x25", alt: "delete") %>
+                    </a>
+                    <a href="" class="panel-links" ng-click="projects.editProject(project.id)">
+                        <%= image_tag("edit.png", size: "25x25", alt: "edit") %>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="taskCreate">
+        <form method="post" class="task-create">
+            <input type="text" ng-model="projects.taskName" class="button-text">
+            <input type="button" class="btn btn-success" ng-click='projects.createTask()' value="send">
+        </form>
+    </div>
+    <div class="taskList">
+        <div class="inline-block">
+            <form method="post">
+                <input type="checkbox">
+            </form>
+        </div>
+        <div class="inline-block task-list-cont"><p class="task-list-text">Rauf loh</p></div>
+        <div class="task-list-row inline-block">
+            <a href=""><%= image_tag("edit.png", size: "25x25", alt: "edit") %> </a>
+            <a href=""><%= image_tag("delete.png", size: "25x25", alt: "delete") %></a>
+        </div>
+    </div>
+</div>
+
+<div class="add-task" >
+    <form method="post" action="">
+        <input type="text" ng-show="projects.createInputActive" ng-model="projects.createInput"/>
+        <input type="button" class="btn-success" value="Add Todo List" ng-click="projects.createProject()">
+    </form>
+</div>

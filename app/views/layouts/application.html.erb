@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title>Workspace</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-resource.js"></script>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  
+</head>
+<body ng-app="app"  ng-controller="ProjectsController as projects">
+  
+<% if user_signed_in? %>
+ <form method="post" action="<%= destroy_user_session_path %>">
+    <input type="hidden" name="_method" value="delete">
+    <input type="hidden" name="authenticity_token" value="">
+    <input type="submit" value="Log out">
+  </form>
+<% else %>
+  <%= link_to "Log In", user_session_path %>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>
