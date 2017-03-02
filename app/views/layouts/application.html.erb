@@ -9,7 +9,7 @@
   <%= csrf_meta_tags %>
   
 </head>
-<body ng-app="app"  ng-controller="ProjectsController as projects">
+<body ng-app="app">
   
 <% if user_signed_in? %>
  <form method="post" action="<%= destroy_user_session_path %>">

@@ -3,7 +3,6 @@ class ProjectsController < ApplicationController
   load_and_authorize_resource
  
   def index
-    render json: @projects
   end
 
   def create
@@ -14,7 +13,6 @@ class ProjectsController < ApplicationController
   def update
     @project.update(project_params)
     render json: @project
-    
   end
 
   def destroy

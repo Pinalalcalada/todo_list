@@ -1,7 +1,3 @@
-div {
-  padding: 2px;
-}
-
 .ib { 
   display: inline-block;
   color: white;
@@ -16,7 +12,7 @@ div {
 }
 
 body {
-  background-image: url(./mainBg.png);
+  background-image: url(./mainbg.png);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -79,12 +75,12 @@ body {
 .projName {
     font-family: inherit;
     font-size: 20px;
-        width: 320px;
+    width: 74%;
     margin: 0px;
 }
 
 .panel-buttons {
-  float:none;
+  margin-top: 15px;
   
 }
 
@@ -99,7 +95,7 @@ body {
 }
 
 .task-list-cont {
-      width: auto;
+      width: 85%;
 }
 
 .add-task {
@@ -108,6 +104,7 @@ body {
     padding-top: 30px;
 }
 
-.task-list-row {
-  float:right;
+.loh {
+   margin: auto auto 30px auto;
+
 }

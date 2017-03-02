@@ -2,7 +2,12 @@ Rails.application.routes.draw do
   root 'application#index'
   
   devise_for :users
-  resources :projects, expect: [:show, :edit]
+  resources :projects, only: [:index, :create, :update, :destroy], defaults: { format: :json } do
+    resources :tasks, only: [:create, :update, :destroy], shallow: true, defaults: { format: :json } do
+      post :complete, on: :member
+    end
+  end
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
